@@ -1,0 +1,25 @@
+a {
+    color: $text-cl;
+    text-decoration: none;
+    display: block;
+}
+img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+}
+
+.btn{
+    width: 195px;
+    height: 60px;
+    border: 2px $white-cl solid;
+    color: $white-cl;
+    border-radius: 5px;
+    cursor: pointer;
+    @include midflex();
+    @include text($fz-btn, MP2, normal, $white-cl, uppercase);
+    &:hover{
+        background: $blue-cl;
+        border: 2px solid $blue-cl;
+    }
+}

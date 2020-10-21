@@ -1,0 +1,17 @@
+
+footer{
+	background: $hover-cl;
+	height: 50px;
+	.container{
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		.left{
+			@include text(12px, MP2, normal, #adadad, none);
+		}
+		.right{
+			@include text(12px, MP2, normal, #adadad, none);
+		}
+	}
+}

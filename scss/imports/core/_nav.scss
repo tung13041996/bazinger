@@ -1,0 +1,71 @@
+
+*{
+    scroll-behavior: smooth;
+}
+
+
+nav{
+    background: #0b1521d6;
+    width: 100%;
+    height: 75px;
+    position: fixed;
+    z-index: 9;
+    .container{
+        height: 100%;
+        .head{
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            &__logo{
+                p{
+                    padding-left: 15px;
+                    @include text($fz-head-logo, MP2, normal, $white-cl, none);
+                    span{
+                        color: $blue-cl;
+                    }
+                }
+            }
+            &__menu{
+                ul{
+                    display: flex;
+                    li{
+                        a{
+                            padding: 0 15px;
+                            @include text($fz-main, MP2, normal, $white-cl, uppercase);
+                            &:hover{
+                                cursor: pointer;
+                                color: $blue-cl;
+                                position: relative;
+                                &:before{
+                                    width: calc(100% - 30px);
+                                    height: 2px;
+                                    display: block;
+                                    content: "";
+                                    background: $blue-cl;
+                                    position: absolute;
+                                    margin-top: -30px;
+                                }
+                            }
+                        }
+                        .active{
+                            cursor: pointer;
+                            color: $blue-cl;
+                            position: relative;
+                            &:before{
+                                width: calc(100% - 30px);
+                                height: 2px;
+                                display: block;
+                                content: "";
+                                background: $blue-cl;
+                                position: absolute;
+                                margin-top: -30px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+} 
